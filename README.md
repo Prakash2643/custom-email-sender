@@ -1,4 +1,5 @@
 Objective
+
 Create a custom email-sending application with a front-end dashboard that performs the following tasks:
 
 Reads data from a Google Sheet or CSV file for email customization.
