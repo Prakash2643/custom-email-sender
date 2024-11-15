@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Status Dashboard</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <h1>Email Status Distribution</h1>
+    <canvas id="statusChart"></canvas>
+    <script>
+        // Sample data; replace these with dynamically rendered values if using a server-side template
+        var statusLabels = ["Sent", "Delivered", "Opened", "Clicked"];
+        var statusCounts = [120, 100, 85, 50];
+
+        var ctx = document.getElementById('statusChart').getContext('2d');
+        var chart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: statusLabels,
+                datasets: [{
+                    label: 'Email Status',
+                    data: statusCounts,
+                    backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                    borderColor: 'rgba(75, 192, 192, 1)',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
